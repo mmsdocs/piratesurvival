@@ -109,7 +109,7 @@ public class PlayerShipController : ShipController
         if (collider.CompareTag("EnemyCannonBall")) { Damage(); }
     }
 
-    private void OnDestroy() => GameOver();
+    private void OnDestroy() { if (currentTime > 0) GameOver(); }
 
     private void GameOver(bool wasTimeout = false)
     {

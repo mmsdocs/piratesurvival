@@ -13,8 +13,7 @@ public class GameOverController : MonoBehaviour
 
     private void Start()
     {
-        bool wasTimeout = PlayerPrefs.GetString("wasTimeout", "false").Equals("true");
-        
+        bool wasTimeout = PlayerPrefs.GetString("wasTimeout", "False").Equals("True");
         background.color = wasTimeout ? Color.white : Color.red;
 
         if (wasTimeout) timeoutSfx.Play();
