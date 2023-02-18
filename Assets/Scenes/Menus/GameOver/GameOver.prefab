@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 7328329484230663509}
   - component: {fileID: 7328329484230663510}
   - component: {fileID: 7328329484230663498}
+  - component: {fileID: 3489882800877495128}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -832,6 +833,14 @@ MonoBehaviour:
   background: {fileID: 7328329484468153434}
   timeoutSfx: {fileID: 8533433551760272851}
   killedSfx: {fileID: 6126779351042750256}
+--- !u!81 &3489882800877495128
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328329484230663511}
+  m_Enabled: 1
 --- !u!1 &7328329484282947284
 GameObject:
   m_ObjectHideFlags: 0

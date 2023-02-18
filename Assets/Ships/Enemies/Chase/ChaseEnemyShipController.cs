@@ -11,15 +11,9 @@ public class ChaseEnemyShipController : EnemyShipController
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void LateUpdate()
-    {
-        LookPlayer();
-    }
+    private void LateUpdate() => LookPlayer();
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
+    private void FixedUpdate() => Move();
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,9 +26,6 @@ public class ChaseEnemyShipController : EnemyShipController
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("PlayerCannonBall"))
-        {
-            Damage();
-        }
+        if (collider.CompareTag("PlayerCannonBall")) { Damage(); }
     }
 }

@@ -26,24 +26,15 @@ public class ShooterEnemyShipController : EnemyShipController
         }
     }
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
+    private void FixedUpdate() => Move();
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Damage();
-        }
+        if (collision.gameObject.CompareTag("Player")) Damage();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("PlayerCannonBall"))
-        {
-            Damage();
-        }
+        if (collider.CompareTag("PlayerCannonBall")) Damage();
     }
 }

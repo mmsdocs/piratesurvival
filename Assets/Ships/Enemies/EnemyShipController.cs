@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class EnemyShipController : ShipController
 {
     [Header("Enemy Ship Specs")]
@@ -12,7 +13,10 @@ public class EnemyShipController : ShipController
 
     protected void Move()
     {
-        if (s_Rigidbody != null && canMove && isDistanceSafeFromPlayer()) s_Rigidbody.velocity = s_Rigidbody.transform.up * speed;
+        if (s_Rigidbody != null && canMove && isDistanceSafeFromPlayer())
+        {
+            s_Rigidbody.velocity = s_Rigidbody.transform.up * speed;
+        }
     }
 
     protected void LookPlayer()

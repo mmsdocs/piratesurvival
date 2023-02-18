@@ -27,15 +27,9 @@ public class GameOverController : MonoBehaviour
         SetHighscore(highscore);
     }
 
-    private void SetScore(int value)
-    {
-        score.text = value.ToString();
-    }
+    private void SetScore(int value) => score.text = value.ToString();
 
-    private void SetHighscore(int value) 
-    {
-        highscore.text = value.ToString();
-    }
+    private void SetHighscore(int value)  => highscore.text = value.ToString();
 
     public void RestartGame() => SceneManager.LoadScene("TreasureWorldLevel");
 

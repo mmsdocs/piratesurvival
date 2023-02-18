@@ -19,10 +19,7 @@ public class SettingsController : MonoBehaviour
         UpdateLevelTimeText(levelTimeSlider.value);
     }
 
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+    public void MainMenu() => SceneManager.LoadScene("MainMenu");
 
     public void UpdateEnemySpawnTimeText(float value)
     {

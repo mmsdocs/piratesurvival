@@ -6,10 +6,7 @@ public class HUDController : MonoBehaviour
     public TextMeshProUGUI score;
     public TextMeshProUGUI levelTime;
 
-    public void SetScoreValue(int value)
-    {
-        if (value > 0) score.text = value.ToString();
-    }
+    public void SetScoreValue(int value) { if (value > 0) score.text = value.ToString(); }
 
     public void SetLevelTimeValue(int value, bool isCritical = false)
     {

@@ -35,10 +35,7 @@ public class PlayerShipController : ShipController
         
     }
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
+    private void FixedUpdate() => Move();
 
     private void LookAtMousePosition()
     {
@@ -104,24 +101,15 @@ public class PlayerShipController : ShipController
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Damage();
-        }
+        if (collision.gameObject.CompareTag("Enemy")) { Damage(); }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("EnemyCannonBall"))
-        {
-            Damage();
-        }
+        if (collider.CompareTag("EnemyCannonBall")) { Damage(); }
     }
 
-    private void OnDestroy()
-    {
-        GameOver();
-    }
+    private void OnDestroy() => GameOver();
 
     private void GameOver(bool wasTimeout = false)
     {

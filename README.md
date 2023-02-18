@@ -4,6 +4,10 @@ Jogo de sobrevivência desenvolvido como desafio do processo de recrutamento par
 
 Você está sozinho no arquipélago Caracol, sobreviva até que a ajuda chegue.
 
+## Especificações
+- Desenvolvido na Unity 2022.2.5f1;
+- Deploy na plataforma Web: ;
+
 ## Como Jogar
 - Pressione a tecla W ou UP_ARROW (seta pra cima) para movimentar sua embarção pra frente;
 - Use o movimento do mouse para direcionar a sua embarcação;

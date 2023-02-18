@@ -3,7 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    public void StartGame() => SceneManager.LoadScene("TreasureWorldLevel");
+    private MainMenuMusicController music;
+    private void Start()
+    {
+        music = MainMenuMusicController.Instance;
+
+        if (!music.IsPlaying()) music.Play();
+    }
+
+    public void StartGame()
+    {
+        music.Stop();
+        SceneManager.LoadScene("TreasureWorldLevel");
+    }
 
     public void Settings() => SceneManager.LoadScene("Settings");
 

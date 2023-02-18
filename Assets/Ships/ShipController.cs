@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class ShipController : MonoBehaviour
 {
     [Header("Ship Common Specs")]
@@ -49,16 +50,10 @@ public class ShipController : MonoBehaviour
     {
         DecreaseHealth();
         NextShipState();
-        if (health == 0)
-        {
-            Explode();
-        }
+        if (health == 0) Explode();
     }
 
-    protected bool CanShoot()
-    {
-        return Time.realtimeSinceStartup - shootInstant >= cannonBallShootCooldown;
-    }
+    protected bool CanShoot() => Time.realtimeSinceStartup - shootInstant >= cannonBallShootCooldown;
 
     protected void Shoot(Transform fromWeapon)
     {

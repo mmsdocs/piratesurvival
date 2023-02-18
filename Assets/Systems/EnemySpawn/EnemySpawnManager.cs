@@ -20,10 +20,7 @@ public class EnemySpawnManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Time.timeSinceLevelLoad - startSpawnTime >= spawnTime) Spawn();
-    }
+    private void Update() { if (Time.timeSinceLevelLoad - startSpawnTime >= spawnTime) Spawn(); }
 
     private void Spawn()
     {
