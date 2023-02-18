@@ -7,6 +7,7 @@ Você está sozinho no arquipélago Caracol, sobreviva até que a ajuda chegue.
 ## Especificações
 - Desenvolvido na Unity 2022.2.5f1;
 - Deploy na plataforma Web: ;
+- Jogar em modo Fullscreen (tela cheia);
 
 ## Como Jogar
 - Pressione a tecla W ou UP_ARROW (seta pra cima) para movimentar sua embarção pra frente;
