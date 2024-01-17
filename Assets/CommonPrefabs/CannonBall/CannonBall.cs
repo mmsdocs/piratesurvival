@@ -7,26 +7,29 @@ public class CannonBall : MonoBehaviour
     public float lifetime = 1.0f;
 
     private Rigidbody2D cb_RigidBody;
-    private float startTime = 0.0f;
 
     private void Start()
     {
         cb_RigidBody = GetComponent<Rigidbody2D>();
-        startTime = Time.timeSinceLevelLoad;
+        Destroy(gameObject, lifetime);
     }
 
     private void FixedUpdate()
     {
         cb_RigidBody.velocity = transform.up * speed;
-        if (Time.timeSinceLevelLoad - startTime >= lifetime) Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy"))
+        if (tag.Contains("Player") && collider.CompareTag("Enemy"))
         {
-            PlayerShipController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerShipController>();
-            player.IncrementScore();
+            LevelManager level = LevelManager.Instance;
+            level.AddPoint();
+        }
+        else if (tag.Contains("Enemy") && collider.CompareTag("Player"))
+        {
+            PlayerHealth player = collider.GetComponent<PlayerHealth>();
+            player.Damage();
         }
 
         Destroy(gameObject);

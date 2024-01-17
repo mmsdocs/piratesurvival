@@ -19,6 +19,7 @@ public class ChaseEnemyShipController : EnemyShipController
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
             SetShipState(3);
             Explode();
         }

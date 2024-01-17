@@ -32,7 +32,7 @@ public class PlayerShipController : ShipController
         UpdateLevelTime();
         LookAtMousePosition();
         Inputs();
-        
+
     }
 
     private void FixedUpdate() => Move();

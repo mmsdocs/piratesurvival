@@ -10,10 +10,13 @@ Você está sozinho no arquipélago Caracol, sobreviva até que a ajuda chegue.
 - Jogar em modo Fullscreen (tela cheia);
 
 ## Como Jogar
-- Pressione a tecla W ou UP_ARROW (seta pra cima) para movimentar sua embarção pra frente;
-- Use o movimento do mouse para direcionar a sua embarcação;
+- W/S move para frente/trás;
+- A/D rotaciona para esquerda/direita;
+- Use o movimento do mouse para direcionar a sua o canhão frontal;
 - Pressione o botão esquerdo do mouse para disparar o canhão frontal;
+  - Mantenha pressionado para mira frontal;
 - Pressione o botão direito do mouse para disparar os canhões laterais (tiros paralelos);
+  - Mantenha pressionado para mira lateral;
 
 ## Sobre os Inimigos
 - Existem dois tipos, o Chase e o Shooter:
