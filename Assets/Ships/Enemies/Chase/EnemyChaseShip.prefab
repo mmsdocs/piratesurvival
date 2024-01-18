@@ -23,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2676339380984451005}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,7 +32,6 @@ Transform:
   - {fileID: 8655632085234789958}
   - {fileID: 8931578132532794977}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8655632085234789961
 GameObject:
@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8655632085234789959}
   - component: {fileID: 305688196162490444}
   - component: {fileID: 8655632085234789954}
+  - component: {fileID: 1716484686398783791}
   m_Layer: 7
   m_Name: ChaseShip
   m_TagString: Enemy
@@ -60,6 +61,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8655632085234789961}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -67,7 +69,6 @@ Transform:
   m_Children:
   - {fileID: 2391101264696788045}
   m_Father: {fileID: 2676339380984451004}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8655632085234789957
 SpriteRenderer:
@@ -202,15 +203,36 @@ MonoBehaviour:
   cannonBallExplosionScale: {x: 0.25, y: 0.25, z: 1}
   cannonBall: {fileID: 0}
   cannonSfx: {fileID: 0}
+  explosion: {fileID: 3749026951392351123, guid: 68da83df2ce8134459c262fb667f7785, type: 3}
+  speed: 2
+  safeDistanceFromPlayer: 0
   shipStates:
   - {fileID: 21300000, guid: fea2f9fcf274a684cb5d095e1bb67e05, type: 3}
   - {fileID: 21300000, guid: b91df4c698ab6a34095b5e5c9a6da74c, type: 3}
   - {fileID: 21300000, guid: d975325f40f349b48b2f39c50e36a16c, type: 3}
   - {fileID: 21300000, guid: 3bc760073b6e8774cb56c5ee17cc42cb, type: 3}
-  explosion: {fileID: 3749026951392351123, guid: 68da83df2ce8134459c262fb667f7785, type: 3}
-  waterTrail: {fileID: 0}
-  speed: 2
-  safeDistanceFromPlayer: 0
+--- !u!195 &1716484686398783791
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655632085234789961}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.33
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.13
+  m_BaseOffset: 0.565
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &2676339381999562183
 PrefabInstance:
   m_ObjectHideFlags: 0

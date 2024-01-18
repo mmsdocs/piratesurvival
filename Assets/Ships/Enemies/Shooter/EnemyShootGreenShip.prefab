@@ -23,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535361146164974154}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,7 +32,6 @@ Transform:
   - {fileID: 7724007124864979277}
   - {fileID: 6465742593590613841}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1954385177551361901
 GameObject:
@@ -57,13 +57,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954385177551361901}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7724007124541655078}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &4480498342855103126
 AudioSource:
@@ -185,13 +185,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7724007123273596742}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7724007124864979277}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &7724007123273596740
 SpriteRenderer:
@@ -268,6 +268,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7724007124541655079}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.666, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -275,7 +276,6 @@ Transform:
   m_Children:
   - {fileID: 2738511292437688445}
   m_Father: {fileID: 7724007124864979277}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7724007124864979266
 GameObject:
@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 7724007124864979264}
   - component: {fileID: 6951924280817767747}
   - component: {fileID: 7148739420424293584}
+  - component: {fileID: 4650182749939743610}
   m_Layer: 7
   m_Name: ShootGreenShip
   m_TagString: Enemy
@@ -304,6 +305,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7724007124864979266}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -313,7 +315,6 @@ Transform:
   - {fileID: 7724007124541655078}
   - {fileID: 5417805502750197766}
   m_Father: {fileID: 535361146164974152}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7724007124864979278
 SpriteRenderer:
@@ -444,21 +445,42 @@ MonoBehaviour:
   health: 3
   maxHealth: 3
   healthBar: {fileID: 8678186734014521029}
-  cannonBallShootCooldown: 1.75
+  cannonBallShootCooldown: 2.75
   cannonBallExplosionScale: {x: 0.25, y: 0.25, z: 1}
   cannonBall: {fileID: 7463630331308373096, guid: e613a64418fda634a967ca54062c2757, type: 3}
   cannonSfx: {fileID: 4480498342855103126}
+  explosion: {fileID: 3749026951392351123, guid: 68da83df2ce8134459c262fb667f7785, type: 3}
+  speed: 1.3
+  safeDistanceFromPlayer: 3
   shipStates:
   - {fileID: 21300000, guid: 3d312592584e78e4eabe1ecc54de4c43, type: 3}
   - {fileID: 21300000, guid: 24d0057b8f4128547b4a259ebcd9745c, type: 3}
   - {fileID: 21300000, guid: 0abd7aae5f185d442856629fbc80ae42, type: 3}
   - {fileID: 21300000, guid: b0457f50734bfe64298bb59ea57d909c, type: 3}
-  explosion: {fileID: 3749026951392351123, guid: 68da83df2ce8134459c262fb667f7785, type: 3}
-  waterTrail: {fileID: 0}
-  speed: 1.3
-  safeDistanceFromPlayer: 3
   shootDistance: 3
   cannon: {fileID: 7724007124541655078}
+--- !u!195 &4650182749939743610
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7724007124864979266}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.33
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.13
+  m_BaseOffset: 0.565
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &535361146290416887
 PrefabInstance:
   m_ObjectHideFlags: 0

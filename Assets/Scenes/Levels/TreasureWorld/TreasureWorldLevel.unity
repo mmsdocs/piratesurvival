@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7758320364494113433, guid: 4eb587a22fc63a04088512a009c62275, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7758320364494113434, guid: 4eb587a22fc63a04088512a009c62275, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -541,7 +545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1352568347
 Transform:
   m_ObjectHideFlags: 0
@@ -599,7 +603,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.07
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: facfdfdf421a4d8439a9de8f547bf3f1, type: 2}
