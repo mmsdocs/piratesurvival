@@ -70,7 +70,6 @@
     <Compile Include="Assets\Systems\SpawnPoint\SpawnPoint.cs" />
     <Compile Include="Assets\Utils\Scripts\Utils.cs" />
     <Compile Include="Assets\Ships\Player\PlayerShipController.cs" />
-    <Compile Include="Assets\Ships\Player\PlayerData.cs" />
     <Compile Include="Assets\Ships\Player\PlayerCamera.cs" />
     <Compile Include="Assets\Ships\Enemies\Shooter\ShooterEnemyShipController.cs" />
     <Compile Include="Assets\Systems\EnemySpawn\EnemySpawnManager.cs" />

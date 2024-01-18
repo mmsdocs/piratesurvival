@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         currentTime = duration - Time.timeSinceLevelLoad;
-        if (currentTime > 0f) hud.SetLevelTimeValue((int)currentTime, currentTime <= 5f);
+        if (currentTime > 0f && hud != null) hud.SetLevelTimeValue((int)currentTime, currentTime <= 5f);
         else GameOver();
     }
 
@@ -40,6 +40,8 @@ public class LevelManager : MonoBehaviour
 
     public void AddPoint()
     {
+        if (hud == null) return;
+
         score++;
         hud.SetScoreValue(score);
     }

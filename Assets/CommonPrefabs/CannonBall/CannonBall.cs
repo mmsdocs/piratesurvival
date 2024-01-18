@@ -29,7 +29,7 @@ public class CannonBall : MonoBehaviour
         else if (tag.Contains("Enemy") && collider.CompareTag("Player"))
         {
             PlayerHealth player = collider.GetComponent<PlayerHealth>();
-            player.Damage();
+            if (player != null) player.Damage();
         }
 
         Destroy(gameObject);

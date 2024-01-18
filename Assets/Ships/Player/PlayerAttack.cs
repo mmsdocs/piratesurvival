@@ -42,6 +42,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Vector2 direction = mousePosition - (Vector2) frontWeapon.position;
             float angle = Vector2.SignedAngle(Vector2.up, direction.normalized);
+            angle = Mathf.Clamp(angle, -67.5f, 67.5f);
             frontWeapon.eulerAngles = new Vector3(0, 0, angle);
         }
     }
@@ -62,17 +63,13 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetButtonUp("Front Weapon"))
         {
-            currentAimCooldown = 0f;
-            frontAimLine.SetActive(false);
             Shoot(frontWeaponBulletExit);
-            Invoke(nameof(ShootCooldown), cannonBallShootCooldown);
+            Cooldown();
         }
         else if (Input.GetButtonUp("Side Weapon"))
         {
-            currentAimCooldown = 0f;
-            sideAimLine.SetActive(false);
             foreach (Transform weapon in sideWeapons) Shoot(weapon);
-            Invoke(nameof(ShootCooldown), cannonBallShootCooldown);
+            Cooldown();
         }
     }
 
@@ -91,6 +88,14 @@ public class PlayerAttack : MonoBehaviour
         cannonBallInstance.layer = gameObject.layer;
 
         cannonSfx.Play();
+    }
+
+    private void Cooldown()
+    {
+        currentAimCooldown = 0f;
+        sideAimLine.SetActive(false);
+        frontAimLine.SetActive(false);
+        Invoke(nameof(ShootCooldown), cannonBallShootCooldown);
     }
 
     private void ShootCooldown() => canShoot = true;
